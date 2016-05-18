@@ -5,9 +5,110 @@
     <meta name="viewport" content="width=device-width">
     <title>Graph Editor</title>
     <script src="https://d3js.org/d3.v4.0.0-alpha.40.min.js"></script>
-    <script src="//curran.github.io/reactive-model/reactive-model-v0.8.0.min.js"></script>
+    <style>
+      .node-rect {
+        stroke: black;
+        stroke-width: 1.5;
+      }
+      .node-text {
+        font-size: 2em;
+        text-anchor: middle;
+      }
+    </style>
   </head>
   <body>
-    <script src="main.js"></script>
+    <script>
+      var width = 960,
+          height = 500,
+          nodeSize = 20,
+          svg = d3.select("body")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+          linkG = svg.append("g")
+          nodeG = svg.append("g");
+
+      var simulation = d3.forceSimulation()
+        .force("link", d3.forceLink())
+        .force("charge", d3.forceManyBody())
+        .force("center", d3.forceCenter(width / 2, height / 2));
+
+      //var drag = d3.drag()
+      //  .on("start", dragstarted)
+      //  .on("drag", dragged)
+      //  .on("end", dragended);
+
+      function render(graph){
+
+        var link = linkG.selectAll("line").data(graph.links);
+        link.enter().append("line");
+        link.exit().remove();
+
+        var node = nodeG.selectAll("g").data(graph.nodes);
+        var nodeEnter = node.enter().append("g");//.call(drag);
+        node.exit().remove();
+
+        nodeEnter.append("rect")
+            .attr("class", "node-rect")
+          .attr("y", -nodeSize)
+          .attr("height", nodeSize * 2)
+          .attr("rx", nodeSize)
+          .attr("ry", nodeSize);
+
+        nodeEnter.append("text")
+          .attr("class", "node-text");
+
+        node.merge(nodeEnter).select(".node-text")
+          .text(function (d){ return d.name; })
+          .each(function (d) {
+            var circleWidth = nodeSize * 2,
+                textLength = this.getComputedTextLength(),
+                textWidth = textLength + nodeSize;
+            if(circleWidth > textWidth) {
+              d.isCircle = true;
+              d.rectX = -nodeSize;
+              d.rectWidth = circleWidth;
+            } else {
+              d.isCircle = false;
+              d.rectX = -(textLength + nodeSize) / 2;
+              d.rectWidth = textWidth;
+              d.textLength = textLength;
+            }
+          });
+
+        node.merge(nodeEnter).select("g rect")
+          .attr("x", function(d) { return d.rectX; })
+          .attr("width", function(d) { return d.rectWidth; });
+
+        //simulation.force("link").links(graph.links);
+
+        simulation.nodes(graph.nodes).on("tick", function (){
+
+          //link
+          //  .attr("x1", function(d) { return d.source.x; })
+          //  .attr("y1", function(d) { return d.source.y; })
+          //  .attr("x2", function(d) { return d.target.x; })
+          //  .attr("y2", function(d) { return d.target.y; });
+
+          node
+            .attr("cx", function(d) { return d.x; })
+            .attr("cy", function(d) { return d.y; });
+        });
+      }
+
+      if(!location.hash){
+        location.hash = "abc";
+      }
+
+      var graphName = location.hash.substr(1);
+      
+      d3.json("graphs/" + graphName + ".json", function (err, graph){
+        graph.nodes = graph.nodes.map(function (d){
+          return { name: d };
+        });
+        render(graph);
+      });
+
+    </script>
   </body>
 </html>
