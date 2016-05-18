@@ -58,7 +58,9 @@
         nodeEnter.append("text")
           .attr("class", "node-text");
 
-        node.merge(nodeEnter).select(".node-text")
+        node = node.merge(nodeEnter);
+
+        node.select(".node-text")
           .text(function (d){ return d.name; })
           .each(function (d) {
             var circleWidth = nodeSize * 2,
@@ -76,23 +78,23 @@
             }
           });
 
-        node.merge(nodeEnter).select("g rect")
+        node.select("g rect")
           .attr("x", function(d) { return d.rectX; })
           .attr("width", function(d) { return d.rectWidth; });
 
-        //simulation.force("link").links(graph.links);
+        simulation.force("link").links(graph.links);
 
         simulation.nodes(graph.nodes).on("tick", function (){
 
-          //link
-          //  .attr("x1", function(d) { return d.source.x; })
-          //  .attr("y1", function(d) { return d.source.y; })
-          //  .attr("x2", function(d) { return d.target.x; })
-          //  .attr("y2", function(d) { return d.target.y; });
+          link
+            .attr("x1", function(d) { return d.source.x; })
+            .attr("y1", function(d) { return d.source.y; })
+            .attr("x2", function(d) { return d.target.x; })
+            .attr("y2", function(d) { return d.target.y; });
 
-          node
-            .attr("cx", function(d) { return d.x; })
-            .attr("cy", function(d) { return d.y; });
+          node.attr("transform", function(d) {      
+            return "translate(" + d.x + "," + d.y + ")";
+          });
         });
       }
 
@@ -105,6 +107,11 @@
       d3.json("graphs/" + graphName + ".json", function (err, graph){
         graph.nodes = graph.nodes.map(function (d){
           return { name: d };
+        });
+        graph.links = graph.links.map(function (d){
+          d.source = graph.nodes[d.source];
+          d.target = graph.nodes[d.target];
+          return d;
         });
         render(graph);
       });
