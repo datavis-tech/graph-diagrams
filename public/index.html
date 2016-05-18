@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Use RequireJS for module loading. -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.14/require.js"></script>
+
+    <!-- Configure RequireJS paths for third party libraries. -->
+    <script>
+      requirejs.config({
+        paths: {
+          d3: "//d3js.org/d3.v3.min",
+          jquery: "//code.jquery.com/jquery-2.1.1.min",
+          lodash: "//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.4.0/lodash.min",
+          async: "//cdnjs.cloudflare.com/ajax/libs/async/0.9.0/async",
+          crossfilter: "//cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.11/crossfilter.min"
+        }
+      });
+    </script>
+
+    <!-- Include CSS that styles the visualization. -->
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Data Flow Diagram</title>
+  </head>
+  <body>
+
+    <!-- The visualization will be injected into this div. -->
+    <div id="container"></div>
+    
+    <!-- Run the main program. -->
+    <script src="main.js"></script>
+    
+  </body>
+</html>

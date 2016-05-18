@@ -1,0 +1,29 @@
+/* Make the visualization container fill the page. */
+#container {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+
+/* Style the nodes of the graph. */
+.node {
+  stroke: black;
+  stroke-width: 1.5;
+}
+.nodeLabel {
+  font-size: 2em;
+  /* Center text horizontally */
+  text-anchor: middle;
+}
+
+/* Style the links of the graph. */
+.link {
+  stroke: black;
+}
+
+/* Set the arrowhead size. */
+.arrow {
+  stroke-width: 1.5px;
+}
