@@ -115,6 +115,12 @@
 
       function dragended(d) {
         if (!d3.event.active) simulation.alphaTarget(0);
+        var meta = {};//TODO get the fixed nodes here
+        d3.request.post("/write/" + graphName, meta, function (err, text){
+          if(err){ console.log(err); }
+          console.log("Updated metadata for " + graphName + " sent to server.");
+          console.log(text);
+        });
       }
 
       function render(graph){
@@ -199,7 +205,7 @@
       function edge(selection){
         selection
           .each(function (d) {
-            var sourceX, targetX, dy, dy, angle;
+            var sourceX, targetX, midX, dy, dy, angle;
 
             if( d.source.rightX < d.target.leftX ){
               sourceX = d.source.rightX;
@@ -212,7 +218,17 @@
             } else if (d.source.isCircle) {
               targetX = sourceX = d.source.x;
             } else {
-              targetX = sourceX = (d.source.x + d.target.x) / 2;
+              midX = (d.source.x + d.target.x) / 2;
+              if(midX > d.target.rightX){
+                midX = d.target.rightX;
+              } else if(midX > d.source.rightX){
+                midX = d.source.rightX;
+              } else if(midX < d.target.leftX){
+                midX = d.target.leftX;
+              } else if(midX < d.source.leftX){
+                midX = d.source.leftX;
+              }
+              targetX = sourceX = midX;
             }
 
             dx = targetX - sourceX;
@@ -232,7 +248,7 @@
 
 
       if(!location.hash){
-        location.hash = "abc";
+        location.hash = "getting-dressed";
       }
 
       var graphName = location.hash.substr(1);
