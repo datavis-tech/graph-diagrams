@@ -3,10 +3,18 @@
   <head>
     <meta charset="utf-8">
 
-    <!-- This program is a tool for visualizing small directed graphs.
-         Inspired by http://bl.ocks.org/mbostock/2675ff61ea5e063ede2b5d63c08020c7
+    <!--
+    
+      This program is a tool for visualizing small directed graphs.
+      Inspired by:
+
+        Force Dragging I
+        http://bl.ocks.org/mbostock/2675ff61ea5e063ede2b5d63c08020c7
+
+        Reactive Flow Diagram
+        http://bl.ocks.org/curran/5905182da50a4667dc00
          
-         Curran Kelleher May 2016
+      Curran Kelleher May 2016
     -->
 
     <meta name="viewport" content="width=device-width">
@@ -39,6 +47,11 @@
       .link-line {
         stroke: black;
         stroke-width: 1.5;
+      }
+
+      /* Set the arrowhead size. */
+      .arrow {
+        stroke-width: 1.5px;
       }
     </style>
   </head>
@@ -112,6 +125,13 @@
         link.exit().remove();
         link = link.merge(linkEnter);
 
+        var arrow = arrowG.selectAll("line").data(graph.links);
+        var arrowEnter = arrow.enter().append("line")
+          .attr("class", "arrow")
+          .attr("marker-end", "url(#arrow)" );
+        arrow.exit().remove();
+        arrow = arrow.merge(arrowEnter);
+
         var node = nodeG.selectAll("g").data(graph.nodes);
         var nodeEnter = node.enter().append("g").call(drag);
         node.exit().remove();
@@ -157,16 +177,57 @@
 
         simulation.nodes(graph.nodes).on("tick", function (){
 
-          link
-            .attr("x1", function(d) { return d.source.x; })
-            .attr("y1", function(d) { return d.source.y; })
-            .attr("x2", function(d) { return d.target.x; })
-            .attr("y2", function(d) { return d.target.y; });
+          graph.nodes.forEach(function (d) {
+            if(d.isCircle){
+              d.leftX = d.rightX = d.x;
+            } else {
+              d.leftX =  d.x - d.textLength / 2 + nodeSize / 2;
+              d.rightX = d.x + d.textLength / 2 - nodeSize / 2;
+            }
+          });
+
+          link.call(edge);
+          arrow.call(edge);
 
           node.attr("transform", function(d) {      
             return "translate(" + d.x + "," + d.y + ")";
           });
         });
+      }
+
+      // Sets the (x1, y1, x2, y2) line properties for graph edges.
+      function edge(selection){
+        selection
+          .each(function (d) {
+            var sourceX, targetX, dy, dy, angle;
+
+            if( d.source.rightX < d.target.leftX ){
+              sourceX = d.source.rightX;
+              targetX = d.target.leftX;
+            } else if( d.target.rightX < d.source.leftX ){
+              targetX = d.target.rightX;
+              sourceX = d.source.leftX;
+            } else if (d.target.isCircle) {
+              targetX = sourceX = d.target.x;
+            } else if (d.source.isCircle) {
+              targetX = sourceX = d.source.x;
+            } else {
+              targetX = sourceX = (d.source.x + d.target.x) / 2;
+            }
+
+            dx = targetX - sourceX;
+            dy = d.target.y - d.source.y;
+            angle = Math.atan2(dx, dy);
+
+            d.sourceX = sourceX + Math.sin(angle) * nodeSize;
+            d.targetX = targetX - Math.sin(angle) * nodeSize;
+            d.sourceY = d.source.y + Math.cos(angle) * nodeSize;
+            d.targetY = d.target.y - Math.cos(angle) * nodeSize;
+          })
+          .attr("x1", function(d) { return d.sourceX; })
+          .attr("y1", function(d) { return d.sourceY; })
+          .attr("x2", function(d) { return d.targetX; })
+          .attr("y2", function(d) { return d.targetY; });
       }
 
 
