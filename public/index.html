@@ -2,6 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
+
+    <!-- This program is a tool for visualizing small directed graphs.
+         Inspired by http://bl.ocks.org/mbostock/2675ff61ea5e063ede2b5d63c08020c7
+         
+         Curran Kelleher May 2016
+    -->
+
     <meta name="viewport" content="width=device-width">
     <title>Graph Editor</title>
     <script src="https://d3js.org/d3.v4.0.0-alpha.40.min.js"></script>
@@ -79,10 +86,24 @@
       simulation.force("link")
         .distance(140);
 
-      //var drag = d3.drag()
-      //  .on("start", dragstarted)
-      //  .on("drag", dragged)
-      //  .on("end", dragended);
+      var drag = d3.drag()
+        .on("start", dragstarted)
+        .on("drag", dragged)
+        .on("end", dragended);
+
+      function dragstarted(d) {
+        if (!d3.event.active) simulation.alphaTarget(0.3).restart()
+        simulation.fix(d);
+      }
+
+      function dragged(d) {
+        simulation.fix(d, d3.event.x, d3.event.y);
+      }
+
+      function dragended(d) {
+        if (!d3.event.active) simulation.alphaTarget(0);
+        simulation.unfix(d);
+      }
 
       function render(graph){
 
@@ -93,7 +114,7 @@
         link = link.merge(linkEnter);
 
         var node = nodeG.selectAll("g").data(graph.nodes);
-        var nodeEnter = node.enter().append("g");//.call(drag);
+        var nodeEnter = node.enter().append("g").call(drag);
         node.exit().remove();
 
         nodeEnter.append("rect")
@@ -145,6 +166,7 @@
           });
         });
       }
+
 
       if(!location.hash){
         location.hash = "abc";
