@@ -11,12 +11,23 @@
         fill: white;
         stroke: black;
         stroke-width: 1.5;
+        cursor: move;
       }
       .node-text {
         font-family: "Roboto", sans-serif;
         font-size: 2em;
         text-anchor: middle;
         alignment-baseline: middle;
+        pointer-events: none;
+
+        /* Disable text selection
+           from http://stackoverflow.com/questions/826782/css-rule-to-disable-text-selection-highlighting */
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none;   /* Chrome/Safari/Opera */
+        -khtml-user-select: none;    /* Konqueror */
+        -moz-user-select: none;      /* Firefox */
+        -ms-user-select: none;       /* Internet Explorer/Edge */
+        user-select: none;
       }
       .link-line {
         stroke: black;
@@ -35,7 +46,11 @@
             .attr("width", width)
             .attr("height", height)
           linkG = svg.append("g")
-          nodeG = svg.append("g");
+          nodeG = svg.append("g")
+
+          // Arrows are separate from link lines so that their size
+          // can be controlled independently from the link lines.
+          arrowG = svg.append("g");
 
       // Arrowhead setup.
       // Draws from Mobile Patent Suits example:
@@ -111,7 +126,7 @@
             }
           });
 
-        node.select("g rect")
+        node.select(".node-rect")
           .attr("x", function(d) { return d.rectX; })
           .attr("width", function(d) { return d.rectWidth; });
 
