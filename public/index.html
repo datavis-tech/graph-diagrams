@@ -102,7 +102,6 @@
 
       function dragended(d) {
         if (!d3.event.active) simulation.alphaTarget(0);
-        simulation.unfix(d);
       }
 
       function render(graph){
@@ -122,7 +121,10 @@
           .attr("y", -nodeSize)
           .attr("height", nodeSize * 2)
           .attr("rx", nodeSize)
-          .attr("ry", nodeSize);
+          .attr("ry", nodeSize)
+          .on("click", function (d){
+            simulation.unfix(d);
+          });
 
         nodeEnter.append("text")
           .attr("class", "node-text");
