@@ -116,11 +116,11 @@
       function dragended(d) {
         if (!d3.event.active) simulation.alphaTarget(0);
         var meta = {};//TODO get the fixed nodes here
-        d3.request.post("/write/" + graphName, meta, function (err, text){
-          if(err){ console.log(err); }
-          console.log("Updated metadata for " + graphName + " sent to server.");
-          console.log(text);
-        });
+        //d3.request.post("/write/" + graphName, meta, function (err, text){
+        //  if(err){ console.log(err); }
+        //  console.log("Updated metadata for " + graphName + " sent to server.");
+        //  console.log(text);
+        //});
       }
 
       function render(graph){
