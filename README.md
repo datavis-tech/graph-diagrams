@@ -12,15 +12,13 @@ To use, clone this repository then run `npm start`. To open a graph file from th
 ## Diagrams
 
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/68416/15389922/cf3f24dc-1dd6-11e6-92d6-058051b752ea.png">
-  <br>
-  <img src="https://cloud.githubusercontent.com/assets/68416/15385597/44a10522-1dc0-11e6-9054-2150f851db46.png">
-  <br>
   <img src="https://cloud.githubusercontent.com/assets/68416/15453189/89c06740-2029-11e6-940b-58207a1492ca.png">
   <br>
   <img src="https://cloud.githubusercontent.com/assets/68416/15385597/44a10522-1dc0-11e6-9054-2150f851db46.png">
   <br>
   <img src="https://cloud.githubusercontent.com/assets/68416/15453417/d2179a14-2032-11e6-9cfb-024c416c699e.png">
+  <br>
+  <img src="https://cloud.githubusercontent.com/assets/68416/15389922/cf3f24dc-1dd6-11e6-92d6-058051b752ea.png">
   <br>
   <img src="https://cloud.githubusercontent.com/assets/68416/15454247/a0fb4c1e-2050-11e6-8c76-111b9defa0ff.png">
   <br>
