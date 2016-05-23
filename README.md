@@ -1,11 +1,13 @@
 # graph-diagrams
-A tool for visualizing directed graphs.
+A tool for visualizing directed graphs. [Try it!](http://bl.ocks.org/curran/9b73eb564c1c8a3d8f3ab207de364bf4)
 
 This tool has been used to create the graph diagrams found in
 
  * <a href="https://github.com/datavis-tech/reactive-model">reactive-model</a>
  * <a href="https://github.com/datavis-tech/reactive-function">reactive-function</a>
  * <a href="https://github.com/datavis-tech/graph-data-structure">graph-data-structure</a>
+
+To use, clone this repository then run `npm start`. To open a graph file from the `/public/graphs` directory, add the name of the file to the URL hash (e.g. [localhost:3000/#full-name](localhost:3000/#full-name)).
 
 ## Diagrams
 
