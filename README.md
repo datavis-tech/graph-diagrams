@@ -50,7 +50,9 @@ Draws from [Reactive Flow Diagram](http://bl.ocks.org/curran/5905182da50a4667dc0
 </p>
 <hr>
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/68416/15426037/9bda7c4e-1ea9-11e6-8ed5-9b37097dc663.png">
+  <a href="https://twitter.com/mbostock/status/733399713928466437">
+    <img src="https://cloud.githubusercontent.com/assets/68416/15426037/9bda7c4e-1ea9-11e6-8ed5-9b37097dc663.png">
+  </a>
 </p>
 
 <p align="center">
