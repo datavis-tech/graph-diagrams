@@ -9,6 +9,7 @@ This tool has been used to create the graph diagrams found in
 
 To use, clone this repository then run `npm start`. To open a graph file from the `/public/graphs` directory, add the name of the file to the URL hash (e.g. [http://localhost:3000/#full-name](http://localhost:3000/#full-name)).
 
+Draws from [Reactive Flow Diagram](http://bl.ocks.org/curran/5905182da50a4667dc00).
 
 ## Diagrams
 
