@@ -7,7 +7,8 @@ This tool has been used to create the graph diagrams found in
  * <a href="https://github.com/datavis-tech/reactive-function">reactive-function</a>
  * <a href="https://github.com/datavis-tech/graph-data-structure">graph-data-structure</a>
 
-To use, clone this repository then run `npm start`. To open a graph file from the `/public/graphs` directory, add the name of the file to the URL hash (e.g. [localhost:3000/#full-name](localhost:3000/#full-name)).
+To use, clone this repository then run `npm start`. To open a graph file from the `/public/graphs` directory, add the name of the file to the URL hash (e.g. [http://localhost:3000/#full-name](http://localhost:3000/#full-name)).
+
 
 ## Diagrams
 
@@ -50,8 +51,6 @@ To use, clone this repository then run `npm start`. To open a graph file from th
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/68416/15426037/9bda7c4e-1ea9-11e6-8ed5-9b37097dc663.png">
 </p>
-
-Draws from [Reactive Flow Diagram](http://bl.ocks.org/curran/5905182da50a4667dc00).
 
 <p align="center">
   <a href="https://datavis.tech/">
