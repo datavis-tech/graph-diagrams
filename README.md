@@ -46,6 +46,10 @@ To use, clone this repository then run `npm start`. To open a graph file from th
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/68416/15385742/36f76410-1dc1-11e6-9fac-a8e41379c795.png">
 </p>
+<hr>
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/68416/15426037/9bda7c4e-1ea9-11e6-8ed5-9b37097dc663.png">
+</p>
 
 Draws from [Reactive Flow Diagram](http://bl.ocks.org/curran/5905182da50a4667dc00).
 
