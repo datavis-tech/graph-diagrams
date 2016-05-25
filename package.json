@@ -1,6 +1,6 @@
 {
   "name": "graph-diagrams",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "A tool for visualizing directed graphs.",
   "main": "index.js",
   "scripts": {
