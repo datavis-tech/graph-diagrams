@@ -2,7 +2,7 @@
 // from within the unit tests of other projects.
 var fs = require("fs");
 module.exports = function (options){
-  return function (graph, name){
+  return function (serialized, name){
     if(options.outputGraphs){
       var filename = [
         "../graph-diagrams/public/graphs/",
@@ -11,7 +11,7 @@ module.exports = function (options){
         name,
         ".json"
       ].join("");
-      var data = JSON.stringify(graph.serialize(), null, 2);
+      var data = JSON.stringify(serialized, null, 2);
       fs.writeFile(filename, data);
     }
   };
