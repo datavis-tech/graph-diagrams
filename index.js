@@ -1,9 +1,16 @@
-function outputGraph(graph, project, name){
-  var filename = "../graph-diagrams/public/graphs/" + project + "_" + name + ".json";
-  var data = JSON.stringify(graph.serialize(), null, 2);
-  fs.writeFile(filename, data);
-}
-
-module.exports = {
-  outputGraph: outputGraph
+// This module is a utility for writing graph files
+// from within the unit tests of other projects.
+var fs = require("fs");
+module.exports = function (options){
+  return function (graph, name){
+    var filename = [
+      "../graph-diagrams/public/graphs/",
+      options.project,
+      "_",
+      name,
+      ".json"
+    ].join("");
+    var data = JSON.stringify(graph.serialize(), null, 2);
+    fs.writeFile(filename, data);
+  };
 };
