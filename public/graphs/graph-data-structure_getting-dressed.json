@@ -1,0 +1,62 @@
+{
+  "nodes": [
+    {
+      "id": "socks"
+    },
+    {
+      "id": "shoes"
+    },
+    {
+      "id": "shirt"
+    },
+    {
+      "id": "belt"
+    },
+    {
+      "id": "tie"
+    },
+    {
+      "id": "jacket"
+    },
+    {
+      "id": "pants"
+    },
+    {
+      "id": "underpants"
+    }
+  ],
+  "links": [
+    {
+      "source": "socks",
+      "target": "shoes"
+    },
+    {
+      "source": "shirt",
+      "target": "belt"
+    },
+    {
+      "source": "shirt",
+      "target": "tie"
+    },
+    {
+      "source": "belt",
+      "target": "jacket"
+    },
+    {
+      "source": "tie",
+      "target": "jacket"
+    },
+    {
+      "source": "pants",
+      "target": "shoes"
+    },
+    {
+      "source": "pants",
+      "target": "belt"
+    },
+    {
+      "source": "underpants",
+      "target": "pants"
+    }
+  ]
+}
