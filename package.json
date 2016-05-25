@@ -1,13 +1,15 @@
 {
   "name": "graph-diagrams",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A tool for visualizing directed graphs.",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "files": [ "index.js" ],
+  "files": [
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/datavis-tech/graph-diagrams.git"
