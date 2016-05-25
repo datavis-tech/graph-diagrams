@@ -3,14 +3,16 @@
 var fs = require("fs");
 module.exports = function (options){
   return function (graph, name){
-    var filename = [
-      "../graph-diagrams/public/graphs/",
-      options.project,
-      "_",
-      name,
-      ".json"
-    ].join("");
-    var data = JSON.stringify(graph.serialize(), null, 2);
-    fs.writeFile(filename, data);
+    if(options.outputGraphs){
+      var filename = [
+        "../graph-diagrams/public/graphs/",
+        options.project,
+        "_",
+        name,
+        ".json"
+      ].join("");
+      var data = JSON.stringify(graph.serialize(), null, 2);
+      fs.writeFile(filename, data);
+    }
   };
 };
