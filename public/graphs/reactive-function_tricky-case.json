@@ -1,0 +1,46 @@
+{
+  "nodes": [
+    {
+      "id": "16",
+      "propertyName": "b"
+    },
+    {
+      "id": "17",
+      "propertyName": "a"
+    },
+    {
+      "id": "18",
+      "propertyName": "c"
+    },
+    {
+      "id": "19",
+      "propertyName": "d"
+    },
+    {
+      "id": "20",
+      "propertyName": "e"
+    }
+  ],
+  "links": [
+    {
+      "source": "16",
+      "target": "18"
+    },
+    {
+      "source": "17",
+      "target": "16"
+    },
+    {
+      "source": "17",
+      "target": "19"
+    },
+    {
+      "source": "18",
+      "target": "20"
+    },
+    {
+      "source": "19",
+      "target": "20"
+    }
+  ]
+}

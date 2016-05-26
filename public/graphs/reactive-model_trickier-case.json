@@ -1,0 +1,74 @@
+{
+  "nodes": [
+    {
+      "id": "59",
+      "propertyName": "b"
+    },
+    {
+      "id": "60",
+      "propertyName": "a"
+    },
+    {
+      "id": "61",
+      "propertyName": "c"
+    },
+    {
+      "id": "62",
+      "propertyName": "d"
+    },
+    {
+      "id": "63",
+      "propertyName": "e"
+    },
+    {
+      "id": "64",
+      "propertyName": "f"
+    },
+    {
+      "id": "65",
+      "propertyName": "g"
+    },
+    {
+      "id": "66",
+      "propertyName": "h"
+    }
+  ],
+  "links": [
+    {
+      "source": "59",
+      "target": "61"
+    },
+    {
+      "source": "60",
+      "target": "59"
+    },
+    {
+      "source": "60",
+      "target": "63"
+    },
+    {
+      "source": "60",
+      "target": "65"
+    },
+    {
+      "source": "61",
+      "target": "62"
+    },
+    {
+      "source": "62",
+      "target": "66"
+    },
+    {
+      "source": "63",
+      "target": "64"
+    },
+    {
+      "source": "64",
+      "target": "66"
+    },
+    {
+      "source": "65",
+      "target": "66"
+    }
+  ]
+}

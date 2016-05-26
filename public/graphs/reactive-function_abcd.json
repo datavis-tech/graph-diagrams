@@ -1,0 +1,34 @@
+{
+  "nodes": [
+    {
+      "id": "12",
+      "propertyName": "c"
+    },
+    {
+      "id": "13",
+      "propertyName": "a"
+    },
+    {
+      "id": "14",
+      "propertyName": "d"
+    },
+    {
+      "id": "15",
+      "propertyName": "b"
+    }
+  ],
+  "links": [
+    {
+      "source": "12",
+      "target": "14"
+    },
+    {
+      "source": "13",
+      "target": "12"
+    },
+    {
+      "source": "15",
+      "target": "14"
+    }
+  ]
+}

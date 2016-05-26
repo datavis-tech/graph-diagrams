@@ -1,0 +1,42 @@
+{
+  "nodes": [
+    {
+      "id": "44",
+      "propertyName": "I"
+    },
+    {
+      "id": "45",
+      "propertyName": "V"
+    },
+    {
+      "id": "46",
+      "propertyName": "R"
+    }
+  ],
+  "links": [
+    {
+      "source": "44",
+      "target": "45"
+    },
+    {
+      "source": "44",
+      "target": "46"
+    },
+    {
+      "source": "45",
+      "target": "44"
+    },
+    {
+      "source": "45",
+      "target": "46"
+    },
+    {
+      "source": "46",
+      "target": "44"
+    },
+    {
+      "source": "46",
+      "target": "45"
+    }
+  ]
+}
