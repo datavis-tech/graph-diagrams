@@ -92,7 +92,8 @@
           .attr("d", "M0,-5L10,0L0,5");
 
       var simulation = d3.forceSimulation()
-        .force("link", d3.forceLink())
+        .force("link", d3.forceLink()
+          .id(function (d){ return d.id; }))
         .force("charge", d3.forceManyBody())
         .force("center", d3.forceCenter(width / 2, height / 2));
 
@@ -158,7 +159,7 @@
         node = node.merge(nodeEnter);
 
         node.select(".node-text")
-          .text(function (d){ return d.name; })
+          .text(function (d){ return d.propertyName || d.id; })
           .each(function (d) {
             var circleWidth = nodeSize * 2,
                 textLength = this.getComputedTextLength(),
@@ -179,8 +180,6 @@
           .attr("x", function(d) { return d.rectX; })
           .attr("width", function(d) { return d.rectWidth; });
 
-        simulation.force("link").links(graph.links);
-
         simulation.nodes(graph.nodes).on("tick", function (){
 
           graph.nodes.forEach(function (d) {
@@ -199,6 +198,10 @@
             return "translate(" + d.x + "," + d.y + ")";
           });
         });
+
+        simulation.force("link").links(graph.links);
+
+
       }
 
       // Sets the (x1, y1, x2, y2) line properties for graph edges.
@@ -253,17 +256,7 @@
 
       var graphName = location.hash.substr(1);
       
-      d3.json("graphs/" + graphName + ".json", function (err, graph){
-        graph.nodes = graph.nodes.map(function (d){
-          return { name: d };
-        });
-        graph.links = graph.links.map(function (d){
-          d.source = graph.nodes[d.source];
-          d.target = graph.nodes[d.target];
-          return d;
-        });
-        render(graph);
-      });
+      d3.json("graphs/" + graphName + ".json", render);
 
     </script>
   </body>
