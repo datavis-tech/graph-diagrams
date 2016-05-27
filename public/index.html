@@ -159,7 +159,7 @@
         node = node.merge(nodeEnter);
 
         node.select(".node-text")
-          .text(function (d){ return d.propertyName || d.id; })
+          .text(function (d){ return "propertyName" in d ? d.propertyName : d.id; })
           .each(function (d) {
             var circleWidth = nodeSize * 2,
                 textLength = this.getComputedTextLength(),
