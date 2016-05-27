@@ -60,6 +60,13 @@ Draws from [Reactive Flow Diagram](http://bl.ocks.org/curran/5905182da50a4667dc0
 
 <hr>
 <p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/68416/15611401/d2a2f8ca-2447-11e6-82f8-61701f43d49e.png">
+  <br>
+  <a href="http://bl.ocks.org/curran/b8e76dd7003538975b3e81e86ac6dd1e">bl.ocks.org - Margin Convention with ReactiveModel</a>
+</p>
+
+<hr>
+<p align="center">
   <img src="https://cloud.githubusercontent.com/assets/68416/15385742/36f76410-1dc1-11e6-9fac-a8e41379c795.png">
   <br>
   <a href="https://github.com/datavis-tech/graph-data-structure/blob/master/README.md#getting-dressed">graph-data-structure - Getting Dressed</a>
