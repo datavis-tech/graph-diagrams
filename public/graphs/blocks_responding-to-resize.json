@@ -1,0 +1,34 @@
+{
+  "nodes": [
+    {
+      "id": "1",
+      "propertyName": ""
+    },
+    {
+      "id": "2",
+      "propertyName": "svg"
+    },
+    {
+      "id": "3",
+      "propertyName": "width"
+    },
+    {
+      "id": "4",
+      "propertyName": "height"
+    }
+  ],
+  "links": [
+    {
+      "source": "2",
+      "target": "1"
+    },
+    {
+      "source": "3",
+      "target": "1"
+    },
+    {
+      "source": "4",
+      "target": "1"
+    }
+  ]
+}
