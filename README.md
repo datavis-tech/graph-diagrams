@@ -46,10 +46,6 @@ Draws from [Reactive Flow Diagram](http://bl.ocks.org/curran/5905182da50a4667dc0
 </p>
 <hr>
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/68416/15575748/17742d7e-2372-11e6-9d25-6e3caf114ca8.png">
-</p>
-<hr>
-<p align="center">
   <img src="https://cloud.githubusercontent.com/assets/68416/15575699/db091b10-2371-11e6-9b0e-8c77878039f5.png">
   <br>
   <a href="https://github.com/datavis-tech/reactive-function#ohms-law">reactive-function - Ohm's Law</a>
@@ -65,6 +61,8 @@ Draws from [Reactive Flow Diagram](http://bl.ocks.org/curran/5905182da50a4667dc0
 <hr>
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/68416/15385742/36f76410-1dc1-11e6-9fac-a8e41379c795.png">
+  <br>
+  <a href="https://github.com/datavis-tech/graph-data-structure/blob/master/README.md#getting-dressed">graph-data-structure - Getting Dressed</a>
 </p>
 <hr>
 <p align="center">
