@@ -52,6 +52,14 @@ Draws from [Reactive Flow Diagram](http://bl.ocks.org/curran/5905182da50a4667dc0
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/68416/15575699/db091b10-2371-11e6-9b0e-8c77878039f5.png">
 </p>
+
+<hr>
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/68416/15610474/0b70d7c6-2443-11e6-8f8f-3dcbbac3dbae.png">
+  <br>
+  <a href="http://bl.ocks.org/curran/974c9def890f8ac0172611921fb51b8a">Responding to Resize with ReactiveModel</a>
+</p>
+
 <hr>
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/68416/15385742/36f76410-1dc1-11e6-9fac-a8e41379c795.png">
