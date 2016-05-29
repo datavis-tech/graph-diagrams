@@ -46,15 +46,30 @@ Draws from [Reactive Flow Diagram](http://bl.ocks.org/curran/5905182da50a4667dc0
 </p>
 <hr>
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/68416/15575748/17742d7e-2372-11e6-9d25-6e3caf114ca8.png">
+  <img src="https://cloud.githubusercontent.com/assets/68416/15575699/db091b10-2371-11e6-9b0e-8c77878039f5.png">
+  <br>
+  <a href="https://github.com/datavis-tech/reactive-function#ohms-law">reactive-function - Ohm's Law</a>
 </p>
+
 <hr>
 <p align="center">
-  <img src="https://cloud.githubusercontent.com/assets/68416/15575699/db091b10-2371-11e6-9b0e-8c77878039f5.png">
+  <img src="https://cloud.githubusercontent.com/assets/68416/15610474/0b70d7c6-2443-11e6-8f8f-3dcbbac3dbae.png">
+  <br>
+  <a href="http://bl.ocks.org/curran/974c9def890f8ac0172611921fb51b8a">bl.ocks.org - Responding to Resize with ReactiveModel</a>
 </p>
+
+<hr>
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/68416/15611401/d2a2f8ca-2447-11e6-82f8-61701f43d49e.png">
+  <br>
+  <a href="http://bl.ocks.org/curran/b8e76dd7003538975b3e81e86ac6dd1e">bl.ocks.org - Margin Convention with ReactiveModel</a>
+</p>
+
 <hr>
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/68416/15385742/36f76410-1dc1-11e6-9fac-a8e41379c795.png">
+  <br>
+  <a href="https://github.com/datavis-tech/graph-data-structure/blob/master/README.md#getting-dressed">graph-data-structure - Getting Dressed</a>
 </p>
 <hr>
 <p align="center">
