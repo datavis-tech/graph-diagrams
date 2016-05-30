@@ -24,7 +24,6 @@
     <style>
       .node-rect {
         fill: white;
-        stroke: black;
         stroke-width: 1.5;
         cursor: move;
       }
@@ -70,7 +69,9 @@
 
           // Arrows are separate from link lines so that their size
           // can be controlled independently from the link lines.
-          arrowG = svg.append("g");
+          arrowG = svg.append("g"),
+
+          fadedColor = "#BFBFBF";
 
       // Arrowhead setup.
       // Draws from Mobile Patent Suits example:
@@ -160,6 +161,7 @@
 
         node.select(".node-text")
           .text(function (d){ return "propertyName" in d ? d.propertyName : d.id; })
+          .attr("fill", function (d) { return d.faded ? fadedColor : "black"; })
           .each(function (d) {
             var circleWidth = nodeSize * 2,
                 textLength = this.getComputedTextLength(),
@@ -178,7 +180,8 @@
 
         node.select(".node-rect")
           .attr("x", function(d) { return d.rectX; })
-          .attr("width", function(d) { return d.rectWidth; });
+          .attr("width", function(d) { return d.rectWidth; })
+          .attr("stroke", function (d) { return d.faded ? fadedColor : "black"; });
 
         simulation.nodes(graph.nodes).on("tick", function (){
 

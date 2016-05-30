@@ -1,0 +1,93 @@
+{
+  "nodes": [
+    {
+      "id": "7",
+      "propertyName": "svg",
+      "faded": true
+    },
+    {
+      "id": "8",
+      "propertyName": "width",
+      "faded": true
+    },
+    {
+      "id": "10",
+      "propertyName": "height",
+      "faded": true
+    },
+    {
+      "id": "11",
+      "propertyName": "innerWidth"
+    },
+    {
+      "id": "12",
+      "propertyName": "marginLeft"
+    },
+    {
+      "id": "13",
+      "propertyName": "marginRight"
+    },
+    {
+      "id": "14",
+      "propertyName": "innerHeight"
+    },
+    {
+      "id": "15",
+      "propertyName": "marginTop"
+    },
+    {
+      "id": "16",
+      "propertyName": "marginBottom"
+    },
+    {
+      "id": "17",
+      "propertyName": "g"
+    },
+    {
+      "id": "18",
+      "propertyName": "g-transform"
+    }
+  ],
+  "links": [
+    {
+      "source": "7",
+      "target": "17"
+    },
+    {
+      "source": "8",
+      "target": "11"
+    },
+    {
+      "source": "10",
+      "target": "14"
+    },
+    {
+      "source": "12",
+      "target": "11"
+    },
+    {
+      "source": "12",
+      "target": "18"
+    },
+    {
+      "source": "13",
+      "target": "11"
+    },
+    {
+      "source": "15",
+      "target": "14"
+    },
+    {
+      "source": "15",
+      "target": "18"
+    },
+    {
+      "source": "16",
+      "target": "14"
+    },
+    {
+      "source": "17",
+      "target": "18"
+    }
+  ]
+}
