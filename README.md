@@ -21,10 +21,14 @@ Draws from [Reactive Flow Diagram](http://bl.ocks.org/curran/5905182da50a4667dc0
 <hr>
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/68416/15385597/44a10522-1dc0-11e6-9054-2150f851db46.png">
+  <br>
+  <a href="https://github.com/datavis-tech/reactive-model/#abc">reactive-model - ABC</a>
 </p>
 <hr>
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/68416/15453417/d2179a14-2032-11e6-9cfb-024c416c699e.png">
+  <br>
+  <a href="https://github.com/datavis-tech/reactive-model/#cde">reactive-model - CDE</a>
 </p>
 <hr>
 <p align="center">
@@ -65,6 +69,18 @@ Draws from [Reactive Flow Diagram](http://bl.ocks.org/curran/5905182da50a4667dc0
   <img src="https://cloud.githubusercontent.com/assets/68416/15611401/d2a2f8ca-2447-11e6-82f8-61701f43d49e.png">
   <br>
   <a href="http://bl.ocks.org/curran/b8e76dd7003538975b3e81e86ac6dd1e">bl.ocks.org - Margin Convention with ReactiveModel</a>
+</p>
+
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/68416/15651271/28c7088a-269c-11e6-99e8-209a735d7314.png">
+  <br>
+  <a href="https://github.com/datavis-tech/reactive-vis#svg">reactive-vis - SVG</a>
+</p>
+
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/68416/15652243/74641c0a-26a2-11e6-83ba-05ad6f18f84e.png">
+  <br>
+  <a href="https://github.com/datavis-tech/reactive-vis#margin">reactive-vis - Margin</a>
 </p>
 
 <hr>
