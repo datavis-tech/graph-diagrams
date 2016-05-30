@@ -15,6 +15,8 @@ Draws from [Reactive Flow Diagram](http://bl.ocks.org/curran/5905182da50a4667dc0
 
 <p align="center">
   <img src="https://cloud.githubusercontent.com/assets/68416/15453189/89c06740-2029-11e6-940b-58207a1492ca.png">
+  <br>
+  <a href="https://github.com/datavis-tech/reactive-model/#ab">reactive-model - AB</a>
 </p>
 <hr>
 <p align="center">
