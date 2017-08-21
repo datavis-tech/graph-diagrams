@@ -1,0 +1,346 @@
+{
+  "nodes": [
+    {
+      "id": "1",
+      "propertyName": "data"
+    },
+    {
+      "id": "2",
+      "propertyName": "packedData"
+    },
+    {
+      "id": "3",
+      "propertyName": "dataFiltered"
+    },
+    {
+      "id": "4",
+      "propertyName": "src"
+    },
+    {
+      "id": "5",
+      "propertyName": "dest"
+    },
+    {
+      "id": "6",
+      "propertyName": "dataBySrc"
+    },
+    {
+      "id": "7",
+      "propertyName": "dataByDest"
+    },
+    {
+      "id": "8",
+      "propertyName": "dataByYear"
+    },
+    {
+      "id": "9",
+      "propertyName": "contextStreamData"
+    },
+    {
+      "id": "10",
+      "propertyName": "allYears"
+    },
+    {
+      "id": "11",
+      "propertyName": "srcKeys"
+    },
+    {
+      "id": "12",
+      "propertyName": "maxStreamLayers"
+    },
+    {
+      "id": "13",
+      "propertyName": "minStreamMax"
+    },
+    {
+      "id": "14",
+      "propertyName": "destKeys"
+    },
+    {
+      "id": "15",
+      "propertyName": "srcStreamDataAllYears"
+    },
+    {
+      "id": "16",
+      "propertyName": "destStreamDataAllYears"
+    },
+    {
+      "id": "17",
+      "propertyName": "srcStreamData"
+    },
+    {
+      "id": "18",
+      "propertyName": "zoomExtent"
+    },
+    {
+      "id": "19",
+      "propertyName": "destStreamData"
+    },
+    {
+      "id": "20",
+      "propertyName": "hashRouting"
+    },
+    {
+      "id": "21",
+      "propertyName": "svgDimensions"
+    },
+    {
+      "id": "22",
+      "propertyName": "containerBox"
+    },
+    {
+      "id": "23",
+      "propertyName": "srcStream"
+    },
+    {
+      "id": "24",
+      "propertyName": "srcStreamBox"
+    },
+    {
+      "id": "25",
+      "propertyName": "streamsMargin"
+    },
+    {
+      "id": "26",
+      "propertyName": "showStreamLabels"
+    },
+    {
+      "id": "27",
+      "propertyName": "colorScale"
+    },
+    {
+      "id": "28",
+      "propertyName": "destStream"
+    },
+    {
+      "id": "29",
+      "propertyName": "destStreamBox"
+    },
+    {
+      "id": "30",
+      "propertyName": "timeTicksYExtent"
+    },
+    {
+      "id": "31",
+      "propertyName": "timePanel"
+    },
+    {
+      "id": "32",
+      "propertyName": "timePanelBox"
+    },
+    {
+      "id": "33",
+      "propertyName": "contextStream"
+    },
+    {
+      "id": "34",
+      "propertyName": "contextStreamBox"
+    },
+    {
+      "id": "35",
+      "propertyName": "timeExtent"
+    }
+  ],
+  "links": [
+    {
+      "source": "1",
+      "target": "3"
+    },
+    {
+      "source": "2",
+      "target": "1"
+    },
+    {
+      "source": "3",
+      "target": "6"
+    },
+    {
+      "source": "3",
+      "target": "7"
+    },
+    {
+      "source": "3",
+      "target": "8"
+    },
+    {
+      "source": "4",
+      "target": "3"
+    },
+    {
+      "source": "4",
+      "target": "20"
+    },
+    {
+      "source": "5",
+      "target": "3"
+    },
+    {
+      "source": "5",
+      "target": "20"
+    },
+    {
+      "source": "6",
+      "target": "11"
+    },
+    {
+      "source": "6",
+      "target": "15"
+    },
+    {
+      "source": "7",
+      "target": "14"
+    },
+    {
+      "source": "7",
+      "target": "16"
+    },
+    {
+      "source": "8",
+      "target": "9"
+    },
+    {
+      "source": "9",
+      "target": "33"
+    },
+    {
+      "source": "10",
+      "target": "9"
+    },
+    {
+      "source": "10",
+      "target": "15"
+    },
+    {
+      "source": "10",
+      "target": "16"
+    },
+    {
+      "source": "11",
+      "target": "23"
+    },
+    {
+      "source": "12",
+      "target": "11"
+    },
+    {
+      "source": "12",
+      "target": "14"
+    },
+    {
+      "source": "13",
+      "target": "11"
+    },
+    {
+      "source": "13",
+      "target": "14"
+    },
+    {
+      "source": "14",
+      "target": "28"
+    },
+    {
+      "source": "15",
+      "target": "17"
+    },
+    {
+      "source": "16",
+      "target": "19"
+    },
+    {
+      "source": "17",
+      "target": "23"
+    },
+    {
+      "source": "18",
+      "target": "17"
+    },
+    {
+      "source": "18",
+      "target": "19"
+    },
+    {
+      "source": "18",
+      "target": "20"
+    },
+    {
+      "source": "18",
+      "target": "23"
+    },
+    {
+      "source": "18",
+      "target": "28"
+    },
+    {
+      "source": "18",
+      "target": "31"
+    },
+    {
+      "source": "19",
+      "target": "28"
+    },
+    {
+      "source": "22",
+      "target": "21"
+    },
+    {
+      "source": "24",
+      "target": "23"
+    },
+    {
+      "source": "24",
+      "target": "30"
+    },
+    {
+      "source": "25",
+      "target": "23"
+    },
+    {
+      "source": "25",
+      "target": "28"
+    },
+    {
+      "source": "25",
+      "target": "31"
+    },
+    {
+      "source": "26",
+      "target": "23"
+    },
+    {
+      "source": "26",
+      "target": "28"
+    },
+    {
+      "source": "27",
+      "target": "23"
+    },
+    {
+      "source": "27",
+      "target": "28"
+    },
+    {
+      "source": "29",
+      "target": "28"
+    },
+    {
+      "source": "29",
+      "target": "30"
+    },
+    {
+      "source": "30",
+      "target": "31"
+    },
+    {
+      "source": "32",
+      "target": "31"
+    },
+    {
+      "source": "34",
+      "target": "33"
+    },
+    {
+      "source": "35",
+      "target": "33"
+    }
+  ]
+}
